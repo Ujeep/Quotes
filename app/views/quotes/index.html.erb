@@ -1,23 +1,17 @@
 <div class="container">
-  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-
-<p><%= notice %></p>
-  <div id="bloom"><img src="<%=asset_path"baloon.jpg"%>"></div>
-  <br>
-<p1>Quotes is made for people who want to share your favorite quotes </p1><br>
-<p1>You can also post quotes that you made.share with people from all over the world!</p1>
-  
-<div id="wisdom"><h1> ー Wisdom Quotes ー</h1></div>
-
-<% @quotes.each do |quote| %>
-
-  <p><%= quote.content %></p>
-   
-   <div id="edit">
-  <%= link_to "Edit", edit_quote_path(quote.id), class: 'btn btn-default btn-sm btn-success'%>
-  <%= link_to "Delete", quote_path(quote.id), method: :delete,data:{confirm:'Are you sure you want to delete this an awesome quote?'}, class: 'btn btn-default btn-sm btn btn-danger' %>
-</div>
-<% end %>
-<div id="quote"><%= link_to"Quote",new_quote_path %></div>
-</div>
+  <div class="" style="border:1px solid #000">
+    <p><%= notice %></p>
+    <div id="bloom"><img src="<%=asset_path"baloon.jpg"%>"></div><br>
+    <p>Quotes is made for people who want to share your favorite quotes </p><br>
+    <p>You can also post quotes that you made.share with people from all over the world!</p>
+    <div id="wisdom"><h1> ー Wisdom Quotes ー</h1></div>
+    <% @quotes.each do |quote| %>
+      <p><%= quote.content %></p>
+      <div id="edit">
+        <%= link_to "Edit", edit_quote_path(quote.id), class: 'btn btn-default btn-sm btn-success'%>
+        <%= link_to "Delete", quote_path(quote.id), method: :delete,data:{confirm:'Are you sure you want to delete this an awesome quote?'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+      </div>
+    <% end %>
+    <div id="quote"><%= link_to"Quote",new_quote_path %></div>
+  </div>
 </div>
