@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="" style="border:1px solid #000">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
     <p><%= notice %></p>
     <div id="bloom"><img src="<%=asset_path"baloon.jpg"%>"></div><br>
-    <p>Quotes is made for people who want to share your favorite quotes </p><br>
-    <p>You can also post quotes that you made.share with people from all over the world!</p>
+    <p>Quotes is made for people who want to share your favorite quotes<br>
+    You can also post quotes that you made.share with people from all over the world!</p>
     <div id="wisdom"><h1> ー Wisdom Quotes ー</h1></div>
     <% @quotes.each do |quote| %>
       <p><%= quote.content %></p>
