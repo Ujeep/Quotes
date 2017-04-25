@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+<h3>Quote with the following contents</h3>
+
+<%= form_for(@quotes) do |f| %>
+  <%= f.hidden_field :content %>
+  <p>Content  :  <%= @quotes.content %></p>
+  <%= f.submit "Quote" ,class: 'btn btn-primary btn-block'  %>
+<% end %>
+
+<%= form_for(@quotes, url: new_quote_path, method: 'get') do |f| %>
+  <%= f.hidden_field :content %>
+  <%= f.submit "back",name:"back", class: 'btn btn-default btn-block' %>
+<% end %>
+  </div>
+</div>

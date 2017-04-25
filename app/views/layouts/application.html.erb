@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Quotes",new_quote_path %></li>
+    </ul>
+  </header>
+
+
+<%= yield %>
+
+<footer>
+    <p>運営会社Quotes株式会社</p>
+    <p>© 2015-2016 Copyright Quotes Corp.</p>
+  </footer>
+
+</body>
+</html>
