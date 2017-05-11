@@ -17,6 +17,7 @@ end
 
   def create
     @quotes=Quote.new(quotes_params)
+    @quotes.user_id = current_user.id
     if @quotes.save
 
     redirect_to quotes_path,notice:"Your favorite quote has posted！"

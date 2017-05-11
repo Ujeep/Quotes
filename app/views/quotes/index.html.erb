@@ -6,6 +6,7 @@
     You can also post quotes that you made.share with people from all over the world!</p>
     <div id="wisdom"><h1> ー Wisdom Quotes ー</h1></div>
     <% @quotes.each do |quote| %>
+    <p><%= quote.user.name %></p>
       <p><%= quote.content %></p>
       <div id="edit">
         <%= link_to "Edit", edit_quote_path(quote.id), class: 'btn btn-default btn-sm btn-success'%>
